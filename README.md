@@ -34,8 +34,6 @@ The purpose of this project is not to mesure your tech skills, but to make sure 
 > TypeORM
 > pg
 > bcryptjs
-> React Query
-> Axios
 
 
 ## Installation
