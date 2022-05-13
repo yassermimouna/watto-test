@@ -37,9 +37,6 @@ The purpose of this project is not to mesure your tech skills, but to make sure 
 > React Query
 > Axios
 
-This text you see here is *actually- written in Markdown! To get a feel
-for Markdown's syntax, type some text into the left window and
-watch the results in the right.
 
 ## Installation
 
