@@ -1,8 +1,12 @@
 /* eslint-disable prettier/prettier */
 
+import { CarEntity } from "src/entities/car.entity";
+import { Role } from "src/entities/role.enum";
+
 export interface User{
     id?: number;
     email?: string;
     password?: string;
-    cars?: number[];
+    cars?: CarEntity[];
+    role?: Role;
 }

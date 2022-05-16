@@ -1,17 +1,22 @@
 /* eslint-disable prettier/prettier */
-import { Column , Entity , PrimaryGeneratedColumn } from 'typeorm';
+import { Column , Entity , OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { CarEntity } from './car.entity';
+import { Role } from './role.enum';
 
 @Entity('user')
 export class UserEntity{  
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column({unique : true})
     email: string;
 
-    @Column()
+    @Column({ select : false })
     password: string;
+    
+    @Column({ type: 'enum' , enum : Role, default: Role.USER})
+    role: Role;
 
-    @Column({type: 'int', array: true, nullable: true })
-    cars: number[];
+    @OneToMany(()=> CarEntity, (CarEntity)=> CarEntity.user )
+    cars: CarEntity[];
 }
