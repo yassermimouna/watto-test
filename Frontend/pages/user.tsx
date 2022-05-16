@@ -1,13 +1,9 @@
 import type { NextPage } from 'next'
-import head from 'next/head'
+import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+const User: NextPage = () => {
+  return (<h1>Cars page</h1>)}
 
-const Admin: NextPage = () => {
-  return (
-
-  )
-}
-
-export default Admin
+  export default User;
