@@ -21,6 +21,9 @@ export class CarService {
     retrieveAllCars(): Observable<Car[]>{
         return from(this.carPostRepository.find());
     }
+    retrieveOneCar(id : number): Observable<Car>{
+        return from(this.carPostRepository.findOne(id));
+    }
 
     deleteCar(id : number): Observable<DeleteResult>{
         return from(this.carPostRepository.delete(id));

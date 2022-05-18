@@ -16,8 +16,13 @@ constructor(private carService: CarService){}
     }
 
     @Get()
-    retrieveAllUsers():Observable<Car[]>{
+    retrieveAllcars():Observable<Car[]>{
        return this.carService.retrieveAllCars();
+    }
+
+    @Get(':id')
+    retrieveOneCar(@Param('id') id: number):Observable<Car>{
+       return this.carService.retrieveOneCar(id);
     }
 
     @Delete(':id')

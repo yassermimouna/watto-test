@@ -1,14 +1,11 @@
-import NextAuth from "next-auth"
-import providers from "next-auth/providers"
+import NextAuth from 'next-auth'
+import SessionProviders from 'next-auth/react'
 
 export default NextAuth({
-
-  providers: [
-    providers.GitHub({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
-    }),
-  
-  ],
-
+    providers : [
+        /*SessionProviders.UserAccess({
+           // userId: localStorage.getItem('id'),
+            //token: localStorage.getItem('token'),
+        })*/
+    ]
 })
